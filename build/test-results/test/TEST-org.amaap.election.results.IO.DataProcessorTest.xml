@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.amaap.election.results.IO.DataProcessorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-20T18:31:11" hostname="LAPTOP-205J7BQ6" time="0.04">
-  <properties/>
-  <testcase name="shouldAbleToReadDataFromTheFile()" classname="org.amaap.election.results.IO.DataProcessorTest" time="0.04"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

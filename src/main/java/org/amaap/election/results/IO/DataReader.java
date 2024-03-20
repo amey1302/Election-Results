@@ -5,17 +5,16 @@ import org.amaap.election.results.IO.exception.FileOperationException;
 import org.amaap.election.results.IO.exception.PathNotFoundException;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 
 public class DataReader {
-    public boolean readFile(String path) throws FileOperationException, FileNotFoundException {
+    public boolean readFile(String path) throws FileOperationException {
         if (path.isEmpty())
             throw new PathNotFoundException("Provide Correct Path");
         File file = new File(path);
-        if(file.length() == 0)
+        if (file.length() == 0)
             throw new FileNotContainDataException("File is Empty");
-        if(!file.exists())
-            throw new FileNotFoundException();
-        return DataProcessor.process(path);
+//        if(!file.exists())
+//            throw new FileNotFoundException();
+        return DataManager.process(path);
     }
 }

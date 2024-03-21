@@ -13,8 +13,6 @@ public class DataReader {
         File file = new File(path);
         if (file.length() == 0)
             throw new FileNotContainDataException("File is Empty");
-//        if(!file.exists())
-//            throw new FileNotFoundException();
         return DataManager.process(path);
     }
 }

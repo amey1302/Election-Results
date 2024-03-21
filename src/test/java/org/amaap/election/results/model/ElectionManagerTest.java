@@ -14,7 +14,7 @@ class ElectionManagerTest {
         //arrange
         ElectionManager electionManager = new ElectionManager();
         //act
-        boolean isFileReadable = electionManager.readFile("D:\\AMAAP Training\\Projects\\ElectionResults\\src\\test\\java\\org\\amaap\\election\\results\\util\\Data.txt");
+        boolean isFileReadable = electionManager.readFile("D:\\AMAAP Training\\Projects\\ElectionResults\\src\\test\\java\\org\\amaap\\election\\results\\util\\electionData.txt");
         //assert
         assertTrue(isFileReadable);
 
@@ -25,21 +25,22 @@ class ElectionManagerTest {
         //arrange
         ElectionManager electionManager = new ElectionManager();
         //act
-        boolean actual = electionManager.processFile("D:\\AMAAP Training\\Projects\\ElectionResults\\src\\test\\java\\org\\amaap\\election\\results\\util\\Data.txt");
+        boolean actual = electionManager.processFile("D:\\AMAAP Training\\Projects\\ElectionResults\\src\\test\\java\\org\\amaap\\election\\results\\util\\electionData.txt");
         //assert
         assertTrue(actual);
 
     }
-    //Todo: need to work on the voteCount calculator
-//    @Test
-//    void shouldAbleToCalculateVoteCountFromData() throws FileOperationException, FileNotFoundException {
-//        //arrange
-//        ElectionManager electionManager = new ElectionManager();
-//        //act
-//        electionManager.processFile("D:\\AMAAP Training\\Projects\\ElectionResults\\src\\test\\java\\org\\amaap\\election\\results\\util\\Data.txt");
-//        boolean actual = electionManager.findVoteCount(DataManager.getElectionData());
-//        //assert
-//        assertTrue(actual);
-//
-//    }
+    @Test
+    void shouldAbleToCalculateVoteCountFromData() throws FileOperationException, FileNotFoundException {
+        //arrange
+        ElectionManager electionManager = new ElectionManager();
+        //act
+        electionManager.processFile("D:\\AMAAP Training\\Projects\\ElectionResults\\src\\test\\java\\org\\amaap\\election\\results\\util\\electionData.txt");
+        boolean actual = electionManager.findVoteCount(DataManager.getElectionData());
+        System.out.println("Winning party data: " + ElectionCounter.getWinningPartyData());
+        System.out.println("Actual result: " + actual);
+        //assert
+        assertTrue(actual);
+
+    }
 }

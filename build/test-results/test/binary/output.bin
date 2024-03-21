@@ -1,3 +1,12 @@
-*{Pune={BJP=7375}, Bangalore={INC=17803}}
-*{Pune={BJP=7375}, Bangalore={INC=17803}}
-{}
+Constituency: Pune
+Max votes: 7375
+Winning party code: BJP
+/Winner data for constituency Pune: {BJP=7375}
+JWinning party data after adding for constituency Pune: {Pune={BJP=7375}}
+Constituency: Bangalore
+Max votes: 17803
+Winning party code: INC
+5Winner data for constituency Bangalore: {INC=17803}
+fWinning party data after adding for constituency Bangalore: {Pune={BJP=7375}, Bangalore={INC=17803}}
+Winning party data: {}
+Actual result: false

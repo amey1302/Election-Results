@@ -18,7 +18,7 @@ public class ElectionCounter {
 
 
     public Map<String, Map<String, Object>> getPartyNameWithMaximumVotes(Map<String, Map<String, Integer>> electionData) {
-        winningPartyData.clear();
+
         Map<String, Map<String, Object>> winningPartyData = new HashMap<>();
 
         for (String constituencyName : electionData.keySet()) {
@@ -49,11 +49,14 @@ public class ElectionCounter {
                 Map<String, Object> winnerDataList = new HashMap<>();
                 winnerDataList.put(winningPartyCode, maxVotes);
 
-                winningPartyData.put(constituencyName, winnerDataList);
-            }
-        }
 
+                winningPartyData.put(constituencyName, winnerDataList);
+
+            }
+
+        }
         return winningPartyData;
+
     }
 
 }

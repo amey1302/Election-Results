@@ -4,7 +4,6 @@ import org.amaap.election.results.IO.exception.InvalidPartyNameException;
 import org.amaap.election.results.model.PartyCodes;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -18,11 +17,10 @@ public class DataManager {
     }
 
     public static boolean process(String path) throws InvalidPartyNameException {
-//        File file = new File(path);
 
         try {
             BufferedReader fileReader = new BufferedReader(new FileReader(path));
-            Map<String, Map<String, Integer>> electionData = processFile(fileReader);
+            electionData = processFile(fileReader);
             fileReader.close();
             return true;
         } catch (IOException e) {

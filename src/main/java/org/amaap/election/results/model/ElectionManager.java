@@ -8,7 +8,7 @@ import org.amaap.election.results.IO.exception.InvalidPartyNameException;
 import java.io.FileNotFoundException;
 import java.util.Map;
 
-public class    ElectionManager {
+public class ElectionManager {
 
     public boolean readFile(String path) throws FileOperationException, FileNotFoundException {
         DataReader dataReader = new DataReader();
@@ -24,6 +24,6 @@ public class    ElectionManager {
     public boolean findVoteCount(Map<String, Map<String, Integer>> electionData) {
         ElectionCounter electionCounter = new ElectionCounter();
         electionCounter.getPartyNameWithMaximumVotes(electionData);
-        return !electionCounter.getWinningPartyData().isEmpty() ;
+        return !electionCounter.getWinningPartyData().isEmpty();
     }
 }

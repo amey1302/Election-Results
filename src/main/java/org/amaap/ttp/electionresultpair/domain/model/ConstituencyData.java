@@ -5,11 +5,19 @@ import java.util.Objects;
 
 public class ConstituencyData {
     private String name;
-    Map<String, Integer> partyCodeWithVotes;
+    private Map<String, Integer> partyCodeWithVotes;
 
     public ConstituencyData(String name, Map<String, Integer> partyCodeWithVotes) {
         this.name = name;
         this.partyCodeWithVotes = partyCodeWithVotes;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Map<String, Integer> getPartyCodeWithVotes() {
+        return partyCodeWithVotes;
     }
 
     @Override

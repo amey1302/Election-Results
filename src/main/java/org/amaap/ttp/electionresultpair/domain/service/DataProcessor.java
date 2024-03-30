@@ -30,7 +30,7 @@ public class DataProcessor {
             while ((line = fileReader.readLine()) != null) {
                 String[] parts = line.split(",");
                 String constituencyName = parts[0].trim();
-                Map<String, Integer> partyCodeWithVotes = new HashMap<>();
+                Map<String, Integer> partyCodeWithVotes = new LinkedHashMap<>();
                 for (int i = 1; i < parts.length; i += 2) {
                     String partyCode = parts[i].trim();
                     int votes = Integer.parseInt(parts[i + 1].trim());
